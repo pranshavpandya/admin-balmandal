@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bal Sabha Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- LOGIN SCREEN -->
+  <div id="login">
+    <h1>Bal Sabha Admin Login</h1>
+    <input type="password" id="pass" placeholder="Enter Admin Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- MAIN APP -->
+  <div id="app" style="display:none;">
+
+    <h1>Bal Sabha Dashboard</h1>
+
+    <!-- Attendance Section -->
+    <div class="card">
+      <h2>Attendance</h2>
+      <input id="name" placeholder="Balak Name">
+      <button onclick="add()">Add Attendance</button>
+      <ul id="list"></ul>
+    </div>
+
+    <!-- Pravachan Section -->
+    <div class="card">
+      <h2>Pravachan Assignment</h2>
+      <input id="pravachan" placeholder="Balak Name for Pravachan">
+      <input id="topic" placeholder="Topic">
+      <button onclick="addPravachan()">Assign</button>
+      <ul id="pravachanList"></ul>
+    </div>
+
+    <!-- Event Gallery -->
+    <div class="card">
+      <h2>Sabha Event Gallery</h2>
+      <input type="file" id="eventPhoto" multiple>
+      <button onclick="addEventPhotos()">Upload Photos</button>
+      <div id="gallery" class="gallery"></div>
+    </div>
+
+    <!-- Logout -->
+    <div class="card logout">
+      <button onclick="logout()">Logout</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
